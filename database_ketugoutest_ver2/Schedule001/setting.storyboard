@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mAE-29-RhB">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting-->
+        <scene sceneID="CHi-mf-HFy">
+            <objects>
+                <viewController id="mAE-29-RhB" customClass="setting" customModule="Schedule001" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ph2-uE-K3O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYc-9C-Qxl">
+                                <rect key="frame" x="0.0" y="33" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="N2A-dl-CW8"/>
+                                    <constraint firstAttribute="width" constant="414" id="kA5-Mx-sKO"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="タイトル" id="8L3-BQ-TtB">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="3cZ-bR-7pi">
+                                            <connections>
+                                                <action selector="backButton:" destination="mAE-29-RhB" id="U02-2H-3WR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-wh-c15">
+                                <rect key="frame" x="157" y="333" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="k9c-E6-kpZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="mK9-lR-Qcv"/>
+                                </constraints>
+                                <state key="normal" title="授業登録/変更"/>
+                                <connections>
+                                    <action selector="toScheduleAdd:" destination="mAE-29-RhB" eventType="touchUpInside" id="QWv-7k-EQg"/>
+                                    <segue destination="RuB-Si-gUl" kind="show" identifier="SettingToScheduleadd" id="ocS-bb-mUw"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nzU-FL-k4M">
+                                <rect key="frame" x="87" y="120" width="240" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lYc-9C-Qxl" firstAttribute="top" secondItem="nHf-52-ebY" secondAttribute="top" constant="13" id="Nuq-Nj-a5M"/>
+                            <constraint firstItem="nHf-52-ebY" firstAttribute="bottom" secondItem="xdW-wh-c15" secondAttribute="bottom" constant="353" id="OEI-e6-a4P"/>
+                            <constraint firstItem="lYc-9C-Qxl" firstAttribute="leading" secondItem="Ph2-uE-K3O" secondAttribute="leading" id="Z0A-fz-I57"/>
+                            <constraint firstItem="xdW-wh-c15" firstAttribute="centerX" secondItem="Ph2-uE-K3O" secondAttribute="centerX" id="oSf-h7-tSf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nHf-52-ebY"/>
+                    </view>
+                    <connections>
+                        <outlet property="jugyou_name" destination="nzU-FL-k4M" id="Ewu-zC-toO"/>
+                        <outlet property="titleLabel" destination="8L3-BQ-TtB" id="SWw-03-yII"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bWL-dK-mdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="-110.86956521739131"/>
+        </scene>
+        <!--scheduleAdd-->
+        <scene sceneID="nAb-fA-Oug">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="scheduleAdd" storyboardName="scheduleAdd" id="RuB-Si-gUl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1q9-GW-CSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="-208"/>
+        </scene>
+    </scenes>
+</document>
