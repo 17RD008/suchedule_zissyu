@@ -54,13 +54,15 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     //設定画面に移動
     @IBAction func button(_ sender: Any) {
         if let button = sender as? UIButton {
-            print("ここまでは来てるよpart1")
             checkButton = button
-            print(button.tag)
-            print("ここまでは来てるよpart2")
             self.performSegue(withIdentifier: "MainToSetting",sender: nil)
         }
     }
+    @IBAction func goToSaturday(_ sender: Any) {
+            self.performSegue(withIdentifier: "MainToSaturday",sender: nil)
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +84,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         yearLabel.text = list[0]
         
         buttonInit()
-        resize()
+        //resize()
         titleChange()
     }
     
@@ -109,13 +111,17 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     //遷移の準備。次の画面へのセグエにsenderを渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "MainToSetting") {
-            print("ここまでは来てるよpart3")
             let next = segue.destination as! setting
             next.numdate = checkButton.tag//sender as? Int
             next.year = self.year
             next.semester = self.semester
-            print("ここまでは来てるよpart4")
         }
+        if(segue.identifier == "MainToSaturday") {
+            let next = segue.destination as! saturday
+            next.year = self.year
+            next.semester = self.semester
+        }
+        
     }
     
     @objc func done() {

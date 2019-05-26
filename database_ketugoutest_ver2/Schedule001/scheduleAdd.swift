@@ -31,9 +31,14 @@ class scheduleAdd: FormViewController{
     //遷移前のストーリーボードから値を取得、授業をデータベースに登録
     @IBAction func addButton(_ sender: Any) {
         if let controller = self.presentingViewController as? setting {
+            print("ここに")
             self.numdate = controller.numdate
             self.year = controller.year
             self.semester = controller.semester
+        }
+        
+        if(class_title == nil) {
+            return;
         }
 
         let realm = try! Realm()

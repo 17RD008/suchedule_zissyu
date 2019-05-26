@@ -20,14 +20,16 @@ class setting: UIViewController {
     let realm = try! Realm()
     
     @IBOutlet weak var jugyou_name: UILabel!
-    
-    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var deleteButton_outlet: UIButton!
     @IBOutlet weak var titleLabel: UINavigationItem!//タイトル
     
     //前の画面に戻る
     @IBAction func backButton(_ sender: Any) {
         
         if let controller = self.presentingViewController as? ViewController {
+            controller.titleChange()
+        }
+        if let controller = self.presentingViewController as? saturday {
             controller.titleChange()
         }
         self.dismiss(animated: true, completion: nil)
@@ -61,15 +63,23 @@ class setting: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    //授業追加画面に移動する
+    @IBAction func toAddButton(_ sender: Any) {
+       //year = (presentingViewController as? ViewController)?.year
+        //semester = (presentingViewController as? ViewController)?.semester
+        print(year)
+    }
+    
     override func viewDidLoad() {
-        //print("ここまでは来てるよpart5")
         super.viewDidLoad()
-        //print("ここまでは来てるよpart6")
-        //jugyou_name.numberOfLines = 0
-       //print("ここまでは来てるよpart7")
+        jugyou_name.numberOfLines = 0
         // Do any additional setup after loading the view.
-        titleLabel.title = cons.numToDay(num: numdate)
-        //print("ここにいるよ")
+        if(numdate < 31 ) {
+            titleLabel.title = cons.numToDay(num: numdate,tag:1 )
+        }
+        else {titleLabel.title = cons.numToDay(num: numdate,tag:2 )}
+        
+        print("ここにいるよ")
         print(numdate)
         print(year)
         print(semester)
@@ -79,17 +89,18 @@ class setting: UIViewController {
     //授業追加画面から戻る時に情報を更新する
     func redraw() {
         jugyou_name.isHidden = true
-        deleteButton.isHidden = true
+        deleteButton_outlet.isHidden = true
         let objs = realm.objects(risyuu.self).filter("date_num == %@ AND year == %@ AND semester == %@",self.numdate,self.year,self.semester)
-        /*print("履修しているのは")
+        print("履修しているのは")
         print(numdate)
         print(year)
-        print("セッティング完了")*/
+        print("セッティング完了")
         if let obj = objs.last {
             jugyou_name_del = obj.jugyou_name
             jugyou_name.text = obj.jugyou_name
             jugyou_name.isHidden = false
-            deleteButton.isHidden = false
+            deleteButton_outlet.isHidden = false
+            print("きてる？")
         }
     }
 }

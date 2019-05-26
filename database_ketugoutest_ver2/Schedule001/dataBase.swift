@@ -37,7 +37,7 @@ class risyuu : Object {
 class constant {
     
     //タグ番号をString型の曜日+時限に変換する
-    func numToDay(num:Int) ->String{
+    func numToDay(num:Int,tag:Int) ->String{
         var msg = ""
         switch num {
         case 1,2,3,4,5: msg = "月曜"
@@ -45,16 +45,18 @@ class constant {
         case 11,12,13,14,15: msg = "水曜"
         case 16,17,18,19,20: msg = "木曜"
         case 21,22,23,24,25: msg = "金曜"
+        case 26,27,28,29,30: msg = "土曜"
+        case 31,32,33,34,35: msg = "集中講義"
         default: msg = "null"
         }
         
         switch num%5 {
             
-        case 1: msg += "1限"
-        case 2: msg += "2限"
-        case 3: msg += "3限"
-        case 4: msg += "4限"
-        case 0: msg += "5限"
+        case 1: if(tag == 1) {msg += "1限"} else {msg += "1"}
+        case 2: if(tag == 1) {msg += "2限"} else {msg += "2"}
+        case 3: if(tag == 1) {msg += "3限"} else {msg += "3"}
+        case 4: if(tag == 1) {msg += "4限"} else {msg += "4"}
+        case 0: if(tag == 1) {msg += "5限"} else {msg += "5"}
         default:msg += "null"
         }
         return msg

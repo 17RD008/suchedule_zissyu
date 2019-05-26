@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mAE-29-RhB">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="mAE-29-RhB" customClass="setting" customModule="Schedule001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ph2-uE-K3O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYc-9C-Qxl">
-                                <rect key="frame" x="0.0" y="33" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="57" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="N2A-dl-CW8"/>
                                     <constraint firstAttribute="width" constant="414" id="kA5-Mx-sKO"/>
@@ -35,35 +35,52 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-wh-c15">
-                                <rect key="frame" x="157" y="333" width="100" height="50"/>
+                                <rect key="frame" x="157" y="459" width="100" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="k9c-E6-kpZ"/>
                                     <constraint firstAttribute="height" constant="50" id="mK9-lR-Qcv"/>
                                 </constraints>
                                 <state key="normal" title="授業登録/変更"/>
                                 <connections>
-                                    <action selector="toScheduleAdd:" destination="mAE-29-RhB" eventType="touchUpInside" id="QWv-7k-EQg"/>
-                                    <segue destination="RuB-Si-gUl" kind="show" identifier="SettingToScheduleadd" id="ocS-bb-mUw"/>
+                                    <segue destination="RuB-Si-gUl" kind="show" identifier="SettingToScheduleAdd" id="Aak-iI-8HR"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nzU-FL-k4M">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nzU-FL-k4M">
                                 <rect key="frame" x="87" y="120" width="240" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="D1p-xB-Z89"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHU-Fc-7hY">
+                                <rect key="frame" x="176" y="552" width="62" height="30"/>
+                                <state key="normal" title="授業削除"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="mAE-29-RhB" eventType="touchUpInside" id="xvn-Ya-5AB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="lYc-9C-Qxl" firstAttribute="top" secondItem="nHf-52-ebY" secondAttribute="top" constant="13" id="2cB-qS-Hk9"/>
+                            <constraint firstItem="nzU-FL-k4M" firstAttribute="leading" secondItem="nHf-52-ebY" secondAttribute="leading" constant="87" id="3Is-of-UzJ"/>
+                            <constraint firstItem="eHU-Fc-7hY" firstAttribute="centerX" secondItem="xdW-wh-c15" secondAttribute="centerX" id="EXx-OX-W2K"/>
+                            <constraint firstItem="nzU-FL-k4M" firstAttribute="centerX" secondItem="lYc-9C-Qxl" secondAttribute="centerX" id="MoV-Xc-m5D"/>
                             <constraint firstItem="lYc-9C-Qxl" firstAttribute="top" secondItem="nHf-52-ebY" secondAttribute="top" constant="13" id="Nuq-Nj-a5M"/>
                             <constraint firstItem="nHf-52-ebY" firstAttribute="bottom" secondItem="xdW-wh-c15" secondAttribute="bottom" constant="353" id="OEI-e6-a4P"/>
                             <constraint firstItem="lYc-9C-Qxl" firstAttribute="leading" secondItem="Ph2-uE-K3O" secondAttribute="leading" id="Z0A-fz-I57"/>
+                            <constraint firstItem="nzU-FL-k4M" firstAttribute="top" secondItem="lYc-9C-Qxl" secondAttribute="bottom" constant="19" id="g3Z-4P-Qhf"/>
                             <constraint firstItem="xdW-wh-c15" firstAttribute="centerX" secondItem="Ph2-uE-K3O" secondAttribute="centerX" id="oSf-h7-tSf"/>
+                            <constraint firstItem="eHU-Fc-7hY" firstAttribute="top" secondItem="xdW-wh-c15" secondAttribute="bottom" constant="43" id="qHv-lO-YPI"/>
+                            <constraint firstItem="lYc-9C-Qxl" firstAttribute="trailing" secondItem="nHf-52-ebY" secondAttribute="trailing" id="sQ5-aG-hDT"/>
+                            <constraint firstItem="lYc-9C-Qxl" firstAttribute="leading" secondItem="nHf-52-ebY" secondAttribute="leading" id="xbr-a8-eNP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nHf-52-ebY"/>
                     </view>
                     <connections>
+                        <outlet property="deleteButton" destination="eHU-Fc-7hY" id="bNV-iQ-gwi"/>
                         <outlet property="jugyou_name" destination="nzU-FL-k4M" id="Ewu-zC-toO"/>
                         <outlet property="titleLabel" destination="8L3-BQ-TtB" id="SWw-03-yII"/>
                     </connections>
