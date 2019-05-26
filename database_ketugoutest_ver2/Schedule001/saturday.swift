@@ -65,6 +65,9 @@ class saturday:UIViewController  {
         button.layer.borderWidth = 0.5
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.cornerRadius = 5.0
+        //button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+        //button.titleLabel?.textAlignment = NSTextAlignment.center
+        //button.titleLabel?.numberOfLines = 0
     }
     
     //ボタンの初期化関数

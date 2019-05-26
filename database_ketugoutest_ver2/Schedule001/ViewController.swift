@@ -43,6 +43,9 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     @IBOutlet weak var button25: UIButton!
     
     @IBOutlet weak var yearLabel: UITextField!
+    
+    @IBOutlet weak var profile: UIButton!
+    
     let myUIPicker = UIPickerView()
     let list = ["2019前期","2019後期"]
     
@@ -86,6 +89,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         buttonInit()
         //resize()
         titleChange()
+        profile.isHidden = true
     }
     
     //ボタンのタイトルを変更
@@ -155,6 +159,10 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         button.layer.borderWidth = 0.5
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.cornerRadius = 5.0
+        
+        button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+        button.titleLabel?.textAlignment = NSTextAlignment.center
+        button.titleLabel?.numberOfLines = 0
     }
 
     //ボタンの初期化関数

@@ -19,8 +19,11 @@ class setting: UIViewController {
     var jugyou_name_del:String?
     let realm = try! Realm()
     
+   
     @IBOutlet weak var jugyou_name: UILabel!
-    @IBOutlet weak var deleteButton_outlet: UIButton!
+    
+    
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var titleLabel: UINavigationItem!//タイトル
     
     //前の画面に戻る
@@ -50,6 +53,9 @@ class setting: UIViewController {
                 if let controller = self.presentingViewController as? ViewController {
                     controller.titleChange()
                 }
+                if let controller = self.presentingViewController as? saturday {
+                    controller.titleChange()
+                }
             //}
         })
         let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
@@ -63,10 +69,7 @@ class setting: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    //授業追加画面に移動する
-    @IBAction func toAddButton(_ sender: Any) {
-       //year = (presentingViewController as? ViewController)?.year
-        //semester = (presentingViewController as? ViewController)?.semester
+    @IBAction func toAdd(_ sender: Any) {
         print(year)
     }
     
@@ -89,7 +92,7 @@ class setting: UIViewController {
     //授業追加画面から戻る時に情報を更新する
     func redraw() {
         jugyou_name.isHidden = true
-        deleteButton_outlet.isHidden = true
+        deleteButton.isHidden = true
         let objs = realm.objects(risyuu.self).filter("date_num == %@ AND year == %@ AND semester == %@",self.numdate,self.year,self.semester)
         print("履修しているのは")
         print(numdate)
@@ -99,7 +102,7 @@ class setting: UIViewController {
             jugyou_name_del = obj.jugyou_name
             jugyou_name.text = obj.jugyou_name
             jugyou_name.isHidden = false
-            deleteButton_outlet.isHidden = false
+            deleteButton.isHidden = false
             print("きてる？")
         }
     }
