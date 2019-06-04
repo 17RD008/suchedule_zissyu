@@ -17,6 +17,7 @@ class scheduleAdd: FormViewController{
     var semester:String?
     var class_title:String?
     var class_memo:String?
+    var course_name:String?
     
     let risyuu_touroku = risyuu()
     
@@ -50,6 +51,10 @@ class scheduleAdd: FormViewController{
         if(class_memo != nil) {
             risyuu_touroku.jugyou_memo = class_memo!
         }
+        if(course_name != nil) {
+            risyuu_touroku.course_name = course_name!
+        }
+        
         
         try! realm.write() {
             realm.add(risyuu_touroku)
@@ -80,7 +85,16 @@ class scheduleAdd: FormViewController{
                 }.onChange{ row in
                     self.class_memo = row.value
                     //print(memovalue!)
-        }
+            }
+            +++ Section("コース")
+            <<< PickerInlineRow<String>() { row in
+                row.title = "コース"
+                row.options = ["コンピュータソフトウェア","ネットワークシステム","アミューズメントデザイン",
+                "社会コミュニケーション","コンピュータサイエンス"]
+                row.value = row.options.first
+                }.onChange { row in
+                    self.course_name = row.value
+            }
         // Do any additional setup after loading the view.
     }
     

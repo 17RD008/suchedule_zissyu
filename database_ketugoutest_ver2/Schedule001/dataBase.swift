@@ -32,6 +32,7 @@ class risyuu : Object {
     @objc dynamic var date_num = 0
     @objc dynamic var jugyou_name = ""
     @objc dynamic var jugyou_memo = ""
+    @objc dynamic var course_name = ""
 }
 
 class constant {
