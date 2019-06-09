@@ -20,6 +20,7 @@ class Jugyou : Object {
     @objc dynamic var jugyou_name = ""
     @objc dynamic var gakunen = 0
     @objc dynamic var jugyou_nendo = 0
+    @objc dynamic var credit = 0
     @objc dynamic var teacher_id = ""
     @objc dynamic var hyoukakijun = ""
     @objc dynamic var course = ""
@@ -30,6 +31,7 @@ class risyuu : Object {
     @objc dynamic var year = 0
     @objc dynamic var semester = ""
     @objc dynamic var date_num = 0
+    @objc dynamic var credit = 0
     @objc dynamic var jugyou_name = ""
     @objc dynamic var jugyou_memo = ""
     @objc dynamic var course_name = ""

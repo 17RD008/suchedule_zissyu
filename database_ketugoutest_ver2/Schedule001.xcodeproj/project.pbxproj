@@ -41,7 +41,7 @@
 		912FA83622772DD200EA64E8 /* setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
 		914C7C45227B7F99003BA7E6 /* dataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataBase.swift; sourceTree = "<group>"; };
 		91C6533F22787C0400BF2282 /* scheduleAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = scheduleAdd.storyboard; sourceTree = "<group>"; };
-		91C6534322787E2100BF2282 /* scheduleAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleAdd.swift; sourceTree = "<group>"; };
+		91C6534322787E2100BF2282 /* scheduleAdd.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = scheduleAdd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

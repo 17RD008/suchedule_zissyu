@@ -70,9 +70,19 @@ class setting: UIViewController {
     }
     
     @IBAction func toAdd(_ sender: Any) {
-        print(year)
+        self.performSegue(withIdentifier: "SettingToScheduleAdd",sender: nil)
     }
-    
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if(segue.identifier == "SettingToScheduleAdd") {
+			let next = segue.destination as! UINavigationController
+			let nextc = next.topViewController as! scheduleAdd
+			nextc.year = self.year
+			nextc.numdate = self.numdate
+			nextc.semester = self.semester
+		}
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         jugyou_name.numberOfLines = 0
