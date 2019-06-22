@@ -96,7 +96,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     func titleChange() {
         let realm = try! Realm()
         
-        for i in 1..<25 {
+        for i in 1..<26 {
             let button = btnret(num: i)
             let title_tmp:Int
             if(i%5 == 0) {title_tmp = 5} else {title_tmp = i%5}
