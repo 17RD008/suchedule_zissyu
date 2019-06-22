@@ -24,7 +24,8 @@ class saturday:UIViewController  {
     @IBOutlet weak var button28: UIButton!
     @IBOutlet weak var button29: UIButton!
     @IBOutlet weak var button30: UIButton!
-    @IBOutlet weak var button31: UIButton!
+
+	@IBOutlet weak var button31: UIButton!
     @IBOutlet weak var button32: UIButton!
     @IBOutlet weak var button33: UIButton!
     @IBOutlet weak var button34: UIButton!
@@ -52,7 +53,7 @@ class saturday:UIViewController  {
         }
     }
     
-    @IBAction func button(_ sender: Any) {
+	@IBAction func button(_ sender: Any) {
         if let button = sender as? UIButton {
             checkButton = button
             self.performSegue(withIdentifier:"SaturdayToSetting",sender: nil)
@@ -65,9 +66,10 @@ class saturday:UIViewController  {
         button.layer.borderWidth = 0.5
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.cornerRadius = 5.0
-        //button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
-        //button.titleLabel?.textAlignment = NSTextAlignment.center
-        //button.titleLabel?.numberOfLines = 0
+		
+		button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+		button.titleLabel?.textAlignment = NSTextAlignment.center
+		button.titleLabel?.numberOfLines = 0
     }
     
     //ボタンの初期化関数
@@ -95,7 +97,7 @@ class saturday:UIViewController  {
             button.setTitle(title_tmp.description, for: .normal)
             let objs = realm.objects(risyuu.self).filter("date_num == %@ AND year == %@ AND semester == %@",i,year,semester)
             if let obj = objs.last {
-                if(obj.year == year && obj.semester == semester) {
+                if(obj.year == self.year && obj.semester == self.semester) {
                     print(obj)
                     title = obj.jugyou_name
                     button.setTitle(title, for: .normal)

@@ -70,9 +70,19 @@ class setting: UIViewController {
     }
     
     @IBAction func toAdd(_ sender: Any) {
-        print(year)
+        self.performSegue(withIdentifier: "SettingToScheduleAdd",sender: nil)
     }
-    
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if(segue.identifier == "SettingToScheduleAdd") {
+			let next = segue.destination as! UINavigationController
+			let nextc = next.topViewController as! scheduleAdd
+			nextc.year = self.year
+			nextc.numdate = self.numdate
+			nextc.semester = self.semester
+		}
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         jugyou_name.numberOfLines = 0
@@ -82,7 +92,7 @@ class setting: UIViewController {
         }
         else {titleLabel.title = cons.numToDay(num: numdate,tag:2 )}
         
-        print("ここにいるよ")
+        //print("ここにいるよ")
         print(numdate)
         print(year)
         print(semester)
@@ -103,7 +113,7 @@ class setting: UIViewController {
             jugyou_name.text = obj.jugyou_name
             jugyou_name.isHidden = false
             deleteButton.isHidden = false
-            print("きてる？")
+            //print("きてる？")
         }
     }
 }
