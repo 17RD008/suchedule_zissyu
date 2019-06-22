@@ -16,6 +16,7 @@
 		910EBE102270A42D00496E8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910EBE0E2270A42D00496E8D /* Main.storyboard */; };
 		910EBE122270A42E00496E8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 910EBE112270A42E00496E8D /* Assets.xcassets */; };
 		910EBE152270A42E00496E8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910EBE132270A42E00496E8D /* LaunchScreen.storyboard */; };
+		9112931E22BE61C400F4E716 /* class_scroll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9112931D22BE61C400F4E716 /* class_scroll.storyboard */; };
 		912FA83722772DD200EA64E8 /* setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA83622772DD200EA64E8 /* setting.swift */; };
 		914C7C46227B7F99003BA7E6 /* dataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C7C45227B7F99003BA7E6 /* dataBase.swift */; };
 		91C6534022787C0400BF2282 /* scheduleAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C6533F22787C0400BF2282 /* scheduleAdd.storyboard */; };
@@ -38,6 +39,7 @@
 		910EBE112270A42E00496E8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		910EBE142270A42E00496E8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		910EBE162270A42E00496E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9112931D22BE61C400F4E716 /* class_scroll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = class_scroll.storyboard; sourceTree = "<group>"; };
 		912FA83622772DD200EA64E8 /* setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
 		914C7C45227B7F99003BA7E6 /* dataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataBase.swift; sourceTree = "<group>"; };
 		91C6533F22787C0400BF2282 /* scheduleAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = scheduleAdd.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				910EBE112270A42E00496E8D /* Assets.xcassets */,
 				910EBE132270A42E00496E8D /* LaunchScreen.storyboard */,
 				910EBE162270A42E00496E8D /* Info.plist */,
+				9112931D22BE61C400F4E716 /* class_scroll.storyboard */,
 			);
 			path = Schedule001;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				910EBE152270A42E00496E8D /* LaunchScreen.storyboard in Resources */,
 				910D0693229A5CCB00B0561A /* saturday.storyboard in Resources */,
+				9112931E22BE61C400F4E716 /* class_scroll.storyboard in Resources */,
 				910EBE122270A42E00496E8D /* Assets.xcassets in Resources */,
 				910EBE102270A42D00496E8D /* Main.storyboard in Resources */,
 				910D0697229A787F00B0561A /* setting.storyboard in Resources */,
