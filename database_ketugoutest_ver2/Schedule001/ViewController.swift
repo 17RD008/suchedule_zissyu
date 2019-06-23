@@ -57,15 +57,26 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     //設定画面に移動
     @IBAction func button(_ sender: Any) {
         if let button = sender as? UIButton {
-            checkButton = button
-            self.performSegue(withIdentifier: "MainToSetting",sender: nil)
+			
+			checkButton = button
+			let realm = try! Realm()
+			let objs = realm.objects(risyuu.self).filter("date_num == %@",button.tag)
+			if let obj = objs.last {
+				self.performSegue(withIdentifier: "MainToScroll",sender: nil)//授業が設定されているときは閲覧
+			}else{
+				self.performSegue(withIdentifier: "MainToSetting",sender: nil)//授業が設定されていないときは設定
+			}
+			
+            //self.performSegue(withIdentifier: "MainToSetting",sender: nil)
         }
     }
     @IBAction func goToSaturday(_ sender: Any) {
             self.performSegue(withIdentifier: "MainToSaturday",sender: nil)
     }
     
-    
+	@IBAction func goToScroll(_ sender: Any) {
+		self.performSegue(withIdentifier: "MainToScroll",sender: nil)
+	}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,7 +100,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         buttonInit()
         //resize()
         titleChange()
-        profile.isHidden = true
+        //profile.isHidden = true
     }
     
     //ボタンのタイトルを変更
@@ -125,7 +136,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
             next.year = self.year
             next.semester = self.semester
         }
-        
+		if(segue.identifier == "MainToScroll") {
+			let next = segue.destination as! scroll
+			next.numdate = checkButton.tag
+			next.year = self.year
+			next.semester = self.semester
+		}
+			
     }
     
     @objc func done() {

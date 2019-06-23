@@ -240,6 +240,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="設定"/>
+                                <connections>
+                                    <action selector="goToScroll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TSa-gX-0Yd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foq-Rg-uMk">
                                 <rect key="frame" x="152" y="797" width="110" height="38"/>
@@ -465,11 +468,20 @@
                         <outlet property="yearLabel" destination="bPB-kW-tUU" id="5B7-VU-AUF"/>
                         <segue destination="R7d-vI-Iei" kind="show" identifier="MainToSetting" id="4Fr-SJ-B4i"/>
                         <segue destination="RF0-dV-0ew" kind="showDetail" identifier="MainToSaturday" id="4EE-f4-AAx"/>
+                        <segue destination="ZUg-ib-OFY" kind="show" identifier="MainToScroll" id="UJj-OY-FsY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1950.7246376811595" y="113.16964285714285"/>
+        </scene>
+        <!--scroll-->
+        <scene sceneID="HhI-Bq-EtB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="scroll" id="ZUg-ib-OFY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NoL-53-o3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2560" y="-80"/>
         </scene>
         <!--setting-->
         <scene sceneID="jMS-4W-HhY">
