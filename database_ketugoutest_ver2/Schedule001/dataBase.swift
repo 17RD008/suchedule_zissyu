@@ -37,6 +37,16 @@ class risyuu : Object {
     @objc dynamic var course_name = ""
 }
 
+class memo : Object {
+	@objc dynamic var year = 0
+	@objc dynamic var semester = ""
+	@objc dynamic var date_num = 0
+	@objc dynamic var jugyou_name = ""
+	@objc dynamic var number_times = 0
+	@objc dynamic var memo = ""
+	@objc dynamic var time = 0.0
+}
+
 class constant {
     
     //タグ番号をString型の曜日+時限に変換する

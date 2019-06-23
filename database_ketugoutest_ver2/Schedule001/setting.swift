@@ -18,6 +18,7 @@ class setting: UIViewController {
     let cons = constant()
     var jugyou_name_del:String?
     let realm = try! Realm()
+
     
    
     @IBOutlet weak var jugyou_name: UILabel!
@@ -91,7 +92,6 @@ class setting: UIViewController {
             titleLabel.title = cons.numToDay(num: numdate,tag:1 )
         }
         else {titleLabel.title = cons.numToDay(num: numdate,tag:2 )}
-        
         //print("ここにいるよ")
         print(numdate)
         print(year)

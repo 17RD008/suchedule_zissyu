@@ -13,7 +13,6 @@
         <!--Scroll-->
         <scene sceneID="q5i-Z9-pYa">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ifk-E3-Bva" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="scroll" id="3Zb-ms-ZTy" customClass="scroll" customModule="Schedule001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wo1-N7-5Ea">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
@@ -32,6 +31,11 @@
                                                         <barButtonItem key="leftBarButtonItem" title="back" id="U7y-2v-ceG">
                                                             <connections>
                                                                 <action selector="backbutton:" destination="3Zb-ms-ZTy" id="Jhg-rT-aIq"/>
+                                                            </connections>
+                                                        </barButtonItem>
+                                                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="0T3-8F-wEN">
+                                                            <connections>
+                                                                <action selector="toSetting:" destination="3Zb-ms-ZTy" id="b9I-eg-vLx"/>
                                                             </connections>
                                                         </barButtonItem>
                                                     </navigationItem>
@@ -57,8 +61,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sh-4P-j96" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1271.5" width="414" height="50.5"/>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sh-4P-j96" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1268" width="414" height="54"/>
                                                 <state key="normal" title="14"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -71,9 +75,12 @@
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="Jwc-Hq-cAg"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaC-ya-Fjo" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1170.5" width="414" height="50.5"/>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaC-ya-Fjo" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1160" width="414" height="54"/>
                                                 <state key="normal" title="12"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -86,9 +93,12 @@
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="Yhi-ER-rcH"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keb-bV-HN4" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1221" width="414" height="50.5"/>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keb-bV-HN4" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1214" width="414" height="54"/>
                                                 <state key="normal" title="13"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -101,9 +111,12 @@
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="QlU-1y-wLr"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zs8-MS-Rgr" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1119.5" width="414" height="51"/>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zs8-MS-Rgr" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1105.5" width="414" height="54.5"/>
                                                 <state key="normal" title="11"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -116,9 +129,12 @@
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="0QG-y6-cpB"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySi-dZ-MmL" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1069" width="414" height="50.5"/>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySi-dZ-MmL" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1051.5" width="414" height="54"/>
                                                 <state key="normal" title="10"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -131,9 +147,12 @@
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="5FY-S0-r57"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioZ-EM-57t" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="968" width="414" height="50.5"/>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioZ-EM-57t" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="943.5" width="414" height="54"/>
                                                 <state key="normal" title="8"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -146,9 +165,12 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="MhJ-JX-jTQ"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9I-py-HuK" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1018.5" width="414" height="50.5"/>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9I-py-HuK" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="997.5" width="414" height="54"/>
                                                 <state key="normal" title="9"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -161,9 +183,12 @@
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="kEt-Dz-opD"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVF-8T-KEP" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="715" width="414" height="50.5"/>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVF-8T-KEP" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="673" width="414" height="54"/>
                                                 <state key="normal" title="3"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -176,9 +201,12 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="eTQ-bO-fLe"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JW-I9-xk1" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="816.5" width="414" height="50.5"/>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JW-I9-xk1" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="781.5" width="414" height="54"/>
                                                 <state key="normal" title="5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -191,9 +219,12 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="AZu-q3-Vr2"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32S-2R-9vC" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="867" width="414" height="50.5"/>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32S-2R-9vC" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="835.5" width="414" height="54"/>
                                                 <state key="normal" title="6"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -206,9 +237,12 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="uu8-Zw-81o"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncf-lI-SNV" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="917.5" width="414" height="50.5"/>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncf-lI-SNV" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="889.5" width="414" height="54"/>
                                                 <state key="normal" title="7"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -221,9 +255,12 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="b3h-sT-w8f"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUZ-2d-j6J" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="765.5" width="414" height="51"/>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUZ-2d-j6J" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="727" width="414" height="54.5"/>
                                                 <state key="normal" title="4"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -236,9 +273,12 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="rpZ-JH-QDv"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WG-hh-UoK" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="614" width="414" height="50.5"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WG-hh-UoK" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="565" width="414" height="54"/>
                                                 <state key="normal" title="1"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -251,6 +291,9 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="U7K-Xv-Zew"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="単位数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfF-ru-pZX" customClass="CustomLabel" customModule="Schedule001" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="186" width="414" height="40"/>
@@ -273,10 +316,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="メモ" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UBW-Fn-yzd" customClass="CustomTextview" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="256" width="414" height="344"/>
+                                                <rect key="frame" x="0.0" y="256" width="414" height="229"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="344" id="DOH-Nj-bti"/>
+                                                    <constraint firstAttribute="height" constant="229" id="DOH-Nj-bti"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -312,8 +355,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvj-gM-vyB" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="664.5" width="414" height="50.5"/>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvj-gM-vyB" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="619" width="414" height="54"/>
                                                 <state key="normal" title="2"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -326,6 +369,30 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="0rk-n6-0mc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7z-QF-ahV" customClass="CustomButton" customModule="Schedule001" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="515" width="414" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="vTL-HR-orY"/>
+                                                </constraints>
+                                                <state key="normal" title="削除"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="deletebutton:" destination="3Zb-ms-ZTy" eventType="touchUpInside" id="lUi-vI-D9B"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -346,6 +413,7 @@
                                             <constraint firstAttribute="trailing" secondItem="sfF-ru-pZX" secondAttribute="trailing" id="9j3-Ja-mcI"/>
                                             <constraint firstItem="zs8-MS-Rgr" firstAttribute="top" secondItem="ySi-dZ-MmL" secondAttribute="bottom" id="Aza-wR-arr"/>
                                             <constraint firstItem="b9I-py-HuK" firstAttribute="height" secondItem="ioZ-EM-57t" secondAttribute="height" id="C5g-GU-Vkb"/>
+                                            <constraint firstItem="v7z-QF-ahV" firstAttribute="width" secondItem="UBW-Fn-yzd" secondAttribute="width" id="CDh-JH-Oq2"/>
                                             <constraint firstItem="sfF-ru-pZX" firstAttribute="leading" secondItem="IES-4S-gvs" secondAttribute="leading" id="Dsi-wP-xMH"/>
                                             <constraint firstItem="po4-7Y-cod" firstAttribute="leading" secondItem="IES-4S-gvs" secondAttribute="leading" id="Dve-nK-Klh"/>
                                             <constraint firstItem="8sh-4P-j96" firstAttribute="height" secondItem="Keb-bV-HN4" secondAttribute="height" id="EB8-Q4-oxQ"/>
@@ -360,6 +428,7 @@
                                             <constraint firstItem="3JW-I9-xk1" firstAttribute="leading" secondItem="IES-4S-gvs" secondAttribute="leading" id="IbI-AQ-fsy"/>
                                             <constraint firstItem="sfF-ru-pZX" firstAttribute="top" secondItem="0Zw-DM-77s" secondAttribute="bottom" constant="1" id="J52-pJ-6NW"/>
                                             <constraint firstItem="d8j-oK-frE" firstAttribute="leading" secondItem="IES-4S-gvs" secondAttribute="leading" id="JO8-YB-CfI"/>
+                                            <constraint firstItem="7WG-hh-UoK" firstAttribute="top" secondItem="v7z-QF-ahV" secondAttribute="bottom" constant="20" id="JRY-sL-UMX"/>
                                             <constraint firstItem="ncf-lI-SNV" firstAttribute="leading" secondItem="IES-4S-gvs" secondAttribute="leading" id="Mij-Mf-tcH"/>
                                             <constraint firstItem="7WG-hh-UoK" firstAttribute="leading" secondItem="IES-4S-gvs" secondAttribute="leading" id="NJb-Cd-XIH"/>
                                             <constraint firstItem="po4-7Y-cod" firstAttribute="top" secondItem="IES-4S-gvs" secondAttribute="top" id="Ncr-Jt-A5A"/>
@@ -386,9 +455,9 @@
                                             <constraint firstAttribute="trailing" secondItem="oUZ-2d-j6J" secondAttribute="trailing" id="e6h-yP-DTm"/>
                                             <constraint firstAttribute="trailing" secondItem="ncf-lI-SNV" secondAttribute="trailing" id="e9p-su-3s1"/>
                                             <constraint firstItem="UBW-Fn-yzd" firstAttribute="leading" secondItem="IES-4S-gvs" secondAttribute="leading" id="eP0-tC-DfY"/>
+                                            <constraint firstItem="v7z-QF-ahV" firstAttribute="top" secondItem="UBW-Fn-yzd" secondAttribute="bottom" constant="30" id="eaM-EP-ZFu"/>
                                             <constraint firstItem="DVF-8T-KEP" firstAttribute="leading" secondItem="IES-4S-gvs" secondAttribute="leading" id="fB9-Ek-Efc"/>
                                             <constraint firstAttribute="bottom" secondItem="8sh-4P-j96" secondAttribute="bottom" id="fvY-D1-kf7"/>
-                                            <constraint firstItem="7WG-hh-UoK" firstAttribute="top" secondItem="UBW-Fn-yzd" secondAttribute="bottom" constant="14" id="gjo-54-nkj"/>
                                             <constraint firstItem="zs8-MS-Rgr" firstAttribute="height" secondItem="ySi-dZ-MmL" secondAttribute="height" id="gjs-lV-WP3"/>
                                             <constraint firstAttribute="trailing" secondItem="DVF-8T-KEP" secondAttribute="trailing" id="gsO-N9-cSu"/>
                                             <constraint firstItem="ioZ-EM-57t" firstAttribute="top" secondItem="ncf-lI-SNV" secondAttribute="bottom" id="hFr-wq-p54"/>
@@ -398,6 +467,7 @@
                                             <constraint firstItem="8sh-4P-j96" firstAttribute="top" secondItem="Keb-bV-HN4" secondAttribute="bottom" id="hxj-cy-Ir8"/>
                                             <constraint firstAttribute="trailing" secondItem="32S-2R-9vC" secondAttribute="trailing" id="iEX-jc-kjS"/>
                                             <constraint firstItem="zs8-MS-Rgr" firstAttribute="width" secondItem="ySi-dZ-MmL" secondAttribute="width" id="iZa-PN-gtQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="v7z-QF-ahV" secondAttribute="trailing" id="jc2-np-EF6"/>
                                             <constraint firstItem="ioZ-EM-57t" firstAttribute="leading" secondItem="IES-4S-gvs" secondAttribute="leading" id="jrJ-WY-2zh"/>
                                             <constraint firstItem="32S-2R-9vC" firstAttribute="leading" secondItem="IES-4S-gvs" secondAttribute="leading" id="lU6-Mf-RDn"/>
                                             <constraint firstItem="32S-2R-9vC" firstAttribute="width" secondItem="3JW-I9-xk1" secondAttribute="width" id="m1k-lN-bBJ"/>
@@ -409,6 +479,7 @@
                                             <constraint firstItem="ySi-dZ-MmL" firstAttribute="leading" secondItem="IES-4S-gvs" secondAttribute="leading" id="pmo-UG-LwB"/>
                                             <constraint firstAttribute="trailing" secondItem="dvj-gM-vyB" secondAttribute="trailing" id="qx4-ep-3xH"/>
                                             <constraint firstItem="po4-7Y-cod" firstAttribute="width" secondItem="IES-4S-gvs" secondAttribute="width" id="roe-1A-mPC"/>
+                                            <constraint firstItem="v7z-QF-ahV" firstAttribute="leading" secondItem="IES-4S-gvs" secondAttribute="leading" id="rpR-gS-hbI"/>
                                             <constraint firstAttribute="trailing" secondItem="zs8-MS-Rgr" secondAttribute="trailing" id="sPZ-zX-lHr"/>
                                             <constraint firstItem="DVF-8T-KEP" firstAttribute="height" secondItem="dvj-gM-vyB" secondAttribute="height" id="twe-QC-WOw"/>
                                             <constraint firstItem="ySi-dZ-MmL" firstAttribute="top" secondItem="b9I-py-HuK" secondAttribute="bottom" id="ugE-AU-lil"/>
@@ -444,13 +515,34 @@
                     </view>
                     <size key="freeformSize" width="414" height="1400"/>
                     <connections>
+                        <outlet property="credit" destination="sfF-ru-pZX" id="Iio-MB-sUm"/>
+                        <outlet property="jugyoubunrui" destination="0Zw-DM-77s" id="K4j-Q2-0jJ"/>
                         <outlet property="label" destination="d8j-oK-frE" id="7tE-FQ-77X"/>
-                        <outlet property="memo" destination="UBW-Fn-yzd" id="wyL-IQ-rnN"/>
+                        <outlet property="memoLabel" destination="UBW-Fn-yzd" id="FWZ-z1-HzN"/>
                         <outlet property="titlelabel" destination="jSj-3q-2YB" id="ak7-gZ-159"/>
+                        <segue destination="PQ4-8D-MCo" kind="show" identifier="scrollToclassMemo" id="Zsk-ro-9YF"/>
+                        <segue destination="Umy-aE-uGi" kind="show" identifier="scrollTosuchduleadd" id="itC-nM-2eN"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifk-E3-Bva" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-363.768115942029" y="-204.91071428571428"/>
+        </scene>
+        <!--scheduleAdd-->
+        <scene sceneID="uIz-uM-R6w">
+            <objects>
+                <viewControllerPlaceholder storyboardName="scheduleAdd" id="Umy-aE-uGi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fm-uh-Bxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="-648"/>
+        </scene>
+        <!--classMemo-->
+        <scene sceneID="Kog-aT-eaa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="classMemo" id="PQ4-8D-MCo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOT-um-ZfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250" y="-523"/>
         </scene>
     </scenes>
 </document>

@@ -241,7 +241,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="設定"/>
                                 <connections>
-                                    <action selector="goToScroll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TSa-gX-0Yd"/>
+                                    <action selector="reveal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rof-eg-KeV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foq-Rg-uMk">
@@ -464,7 +464,6 @@
                         <outlet property="label3" destination="LhJ-zc-bZg" id="bGQ-od-3we"/>
                         <outlet property="label4" destination="yhI-G5-1au" id="dl8-cs-jWB"/>
                         <outlet property="label5" destination="nYw-db-pNc" id="0sO-8x-9nc"/>
-                        <outlet property="profile" destination="6mM-az-hhq" id="hne-pv-gEg"/>
                         <outlet property="yearLabel" destination="bPB-kW-tUU" id="5B7-VU-AUF"/>
                         <segue destination="R7d-vI-Iei" kind="show" identifier="MainToSetting" id="4Fr-SJ-B4i"/>
                         <segue destination="RF0-dV-0ew" kind="showDetail" identifier="MainToSaturday" id="4EE-f4-AAx"/>

@@ -18,10 +18,13 @@
 		910EBE152270A42E00496E8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910EBE132270A42E00496E8D /* LaunchScreen.storyboard */; };
 		9112931E22BE61C400F4E716 /* scroll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9112931D22BE61C400F4E716 /* scroll.storyboard */; };
 		9112932022BE702600F4E716 /* scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9112931F22BE702600F4E716 /* scroll.swift */; };
-		9112932222BE85BF00F4E716 /* class1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9112932122BE85BF00F4E716 /* class1.storyboard */; };
 		9112932422BE883200F4E716 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9112932322BE883200F4E716 /* CustomButton.swift */; };
 		9112932622BE8EAE00F4E716 /* CustomTextview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9112932522BE8EAE00F4E716 /* CustomTextview.swift */; };
 		9112932822BE8F8D00F4E716 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9112932722BE8F8D00F4E716 /* CustomLabel.swift */; };
+		9116647822BF5EF6003383D2 /* classMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9116647722BF5EF6003383D2 /* classMemo.storyboard */; };
+		9116647A22BF5F24003383D2 /* classMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116647922BF5F24003383D2 /* classMemo.swift */; };
+		9116647C22BF76E3003383D2 /* memoField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9116647B22BF76E3003383D2 /* memoField.storyboard */; };
+		9116647E22BF77ED003383D2 /* memoField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116647D22BF77ED003383D2 /* memoField.swift */; };
 		912FA83722772DD200EA64E8 /* setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FA83622772DD200EA64E8 /* setting.swift */; };
 		914C7C46227B7F99003BA7E6 /* dataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C7C45227B7F99003BA7E6 /* dataBase.swift */; };
 		91C6534022787C0400BF2282 /* scheduleAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C6533F22787C0400BF2282 /* scheduleAdd.storyboard */; };
@@ -46,10 +49,13 @@
 		910EBE162270A42E00496E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9112931D22BE61C400F4E716 /* scroll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = scroll.storyboard; sourceTree = "<group>"; };
 		9112931F22BE702600F4E716 /* scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scroll.swift; sourceTree = "<group>"; };
-		9112932122BE85BF00F4E716 /* class1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = class1.storyboard; sourceTree = "<group>"; };
 		9112932322BE883200F4E716 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		9112932522BE8EAE00F4E716 /* CustomTextview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextview.swift; sourceTree = "<group>"; };
 		9112932722BE8F8D00F4E716 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		9116647722BF5EF6003383D2 /* classMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = classMemo.storyboard; sourceTree = "<group>"; };
+		9116647922BF5F24003383D2 /* classMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classMemo.swift; sourceTree = "<group>"; };
+		9116647B22BF76E3003383D2 /* memoField.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = memoField.storyboard; sourceTree = "<group>"; };
+		9116647D22BF77ED003383D2 /* memoField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoField.swift; sourceTree = "<group>"; };
 		912FA83622772DD200EA64E8 /* setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
 		914C7C45227B7F99003BA7E6 /* dataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataBase.swift; sourceTree = "<group>"; };
 		91C6533F22787C0400BF2282 /* scheduleAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = scheduleAdd.storyboard; sourceTree = "<group>"; };
@@ -112,10 +118,13 @@
 				910EBE132270A42E00496E8D /* LaunchScreen.storyboard */,
 				910EBE162270A42E00496E8D /* Info.plist */,
 				9112931D22BE61C400F4E716 /* scroll.storyboard */,
+				9116647722BF5EF6003383D2 /* classMemo.storyboard */,
+				9116647922BF5F24003383D2 /* classMemo.swift */,
+				9116647B22BF76E3003383D2 /* memoField.storyboard */,
+				9116647D22BF77ED003383D2 /* memoField.swift */,
 				9112932722BE8F8D00F4E716 /* CustomLabel.swift */,
 				9112932522BE8EAE00F4E716 /* CustomTextview.swift */,
 				9112932322BE883200F4E716 /* CustomButton.swift */,
-				9112932122BE85BF00F4E716 /* class1.storyboard */,
 				9112931F22BE702600F4E716 /* scroll.swift */,
 			);
 			path = Schedule001;
@@ -191,12 +200,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				910EBE152270A42E00496E8D /* LaunchScreen.storyboard in Resources */,
-				9112932222BE85BF00F4E716 /* class1.storyboard in Resources */,
 				910D0693229A5CCB00B0561A /* saturday.storyboard in Resources */,
 				9112931E22BE61C400F4E716 /* scroll.storyboard in Resources */,
 				910EBE122270A42E00496E8D /* Assets.xcassets in Resources */,
 				910EBE102270A42D00496E8D /* Main.storyboard in Resources */,
+				9116647C22BF76E3003383D2 /* memoField.storyboard in Resources */,
 				910D0697229A787F00B0561A /* setting.storyboard in Resources */,
+				9116647822BF5EF6003383D2 /* classMemo.storyboard in Resources */,
 				910D0695229A786C00B0561A /* saturday.storyboard in Resources */,
 				91C6534022787C0400BF2282 /* scheduleAdd.storyboard in Resources */,
 			);
@@ -266,10 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9116647E22BF77ED003383D2 /* memoField.swift in Sources */,
 				9112932822BE8F8D00F4E716 /* CustomLabel.swift in Sources */,
 				9112932622BE8EAE00F4E716 /* CustomTextview.swift in Sources */,
 				910D0691229A5CAF00B0561A /* saturday.swift in Sources */,
 				914C7C46227B7F99003BA7E6 /* dataBase.swift in Sources */,
+				9116647A22BF5F24003383D2 /* classMemo.swift in Sources */,
 				912FA83722772DD200EA64E8 /* setting.swift in Sources */,
 				910EBE0D2270A42D00496E8D /* ViewController.swift in Sources */,
 				9112932422BE883200F4E716 /* CustomButton.swift in Sources */,

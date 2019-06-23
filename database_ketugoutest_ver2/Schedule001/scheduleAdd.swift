@@ -15,12 +15,22 @@ class scheduleAdd: FormViewController{
 	var numdate:Int = 0//受け
 	var year:Int = 0//受け
 	var credit:Int?
+	var jugyou_name = ""
 	var semester:String = ""//受け
 	var class_title:String?
 	var class_memo:String?
 	var course_name:String?
 	let risyuu_touroku = risyuu()
 	
+	var realmFlag = false//上書きフラグ
+	
+	var defaultjugyou_name = ""//scrollからの受け
+	var defaultmemo = ""
+	var defaultcourse = ""
+	var defaultcredit = 0
+	
+	
+	@IBOutlet weak var addbutton_outlet: UIBarButtonItem!
 	//授業設定画面に戻る
 	@IBAction func backButton(_ sender: Any) {
 		if let controller = self.presentingViewController as? setting {
@@ -34,7 +44,6 @@ class scheduleAdd: FormViewController{
 	//遷移前のストーリーボードから値を取得、授業をデータベースに登録
 	@IBAction func addButton(_ sender: Any) {
 		if let controller = self.presentingViewController as? setting {
-			//print("ここに")
 			self.numdate = controller.numdate
 			self.year = controller.year
 			self.semester = controller.semester
@@ -46,10 +55,12 @@ class scheduleAdd: FormViewController{
 		
 		let realm = try! Realm()
 		print(Realm.Configuration.defaultConfiguration.fileURL!)
+		
 		risyuu_touroku.date_num = numdate
 		risyuu_touroku.year = year
 		risyuu_touroku.semester = semester
 		risyuu_touroku.jugyou_name = class_title!
+			
 		
 		if(class_memo != nil) {
 			risyuu_touroku.jugyou_memo = class_memo!
@@ -58,37 +69,74 @@ class scheduleAdd: FormViewController{
 		if(course_name != nil) {
 			risyuu_touroku.course_name = course_name!
 		}
+			
 		
 		if(credit != nil) {
 			risyuu_touroku.credit = credit!
+			
 		}
-		
-		try! realm.write() {
-			realm.add(risyuu_touroku)
+		if realmFlag == false {
+			try! realm.write() {
+				realm.add(risyuu_touroku)
+			}
+			
+		} else {
+			let objs = realm.objects(risyuu.self).filter("jugyou_name = %@ AND date_num = %@",defaultjugyou_name,numdate)
+			if let obj = objs.last {
+				var jugyou_name_temp = ""
+				try! realm.write() {
+					jugyou_name_temp = obj.jugyou_name
+					obj.jugyou_name = risyuu_touroku.jugyou_name
+					obj.course_name = risyuu_touroku.course_name
+					obj.credit = risyuu_touroku.credit
+					obj.jugyou_memo = risyuu_touroku.jugyou_memo
+				}
+				let objs2 = realm.objects(memo.self).filter("jugyou_name = %@ AND date_num = %@",jugyou_name_temp,numdate)
+				try! realm.write {
+					objs2.setValue(obj.jugyou_name, forKey: "jugyou_name")
+				}
+			}
 		}
 		
 		if let controller = self.presentingViewController as? setting {
 			controller.redraw()
 		}
+		
+		if let controller = self.presentingViewController as? scroll {
+			let past = controller.presentingViewController as? ViewController
+			past!.titleChange()
+			controller.viewDidLoad()
+		}
 		self.dismiss(animated: true, completion: nil)
 	}
 	
 	override func viewDidLoad() {
+		if let controller = self.presentingViewController as? scroll {
+			realmFlag = true
+			print("scrollから遷移")
+			addbutton_outlet.title = "Edit"
+		}
+		
 		super.viewDidLoad()
 		form
 			+++ Section("授業登録/変更")
 			<<< TextRow { ret in
-					ret.title = "授業名"
-					ret.placeholder = "タイトルを入力"
-					}.onChange{ ret in
-						self.class_title = ret.value
-						//print(memovalue!)
-						
+				ret.title = "授業名"
+				ret.placeholder = "タイトルを入力"
+				if realmFlag == true {
+					print(defaultjugyou_name)
+					ret.value = defaultjugyou_name
+				}
+				}.onChange{ ret in
+					self.class_title = ret.value
 			}
 			
 			<<< TextAreaRow { row in
 				row.title = "メモ"
 				row.placeholder = "メモを入力"
+				if realmFlag == true {
+					row.value = defaultmemo
+				}
 				}.onChange{ row in
 					self.class_memo = row.value
 					//print(memovalue!)
@@ -98,7 +146,6 @@ class scheduleAdd: FormViewController{
 			<<< PickerInlineRow<String>() { row in
 				row.title = "授業分類"
 				row.options = ["人間形成","英語","学部共通","学系共通","コンピュータソフトウェアコース","ネットワークシステムコース","アミューズメントデザインコース","社会コミュニケーションコース","コンピュータサイエンスコース"]
-				//row.value = row.options.first
 				}.onChange { row in
 					self.course_name = row.value
 			}
@@ -106,6 +153,10 @@ class scheduleAdd: FormViewController{
 			+++ Section("単位数")
 			<<< TextRow { row in
 				row.title = "単位数"
+				if realmFlag == true {
+					row.value = defaultcredit.description
+					credit = defaultcredit
+				}
 				}.onChange { row in
 					if let ret = row.value {
 						if let cred = Int(ret) {

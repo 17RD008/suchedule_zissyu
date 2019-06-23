@@ -51,12 +51,26 @@ class saturday:UIViewController  {
             next.year = self.year
             next.semester = self.semester
         }
+		
+		if(segue.identifier == "SaturdayToScroll") {
+			let next = segue.destination as! scroll
+			next.numdate = checkButton.tag
+			next.year = self.year
+			next.semester = self.semester
+		}
     }
     
 	@IBAction func button(_ sender: Any) {
         if let button = sender as? UIButton {
             checkButton = button
-            self.performSegue(withIdentifier:"SaturdayToSetting",sender: nil)
+			
+			let realm = try! Realm()
+			let objs = realm.objects(risyuu.self).filter("date_num == %@",button.tag)
+			if let obj = objs.last {
+				self.performSegue(withIdentifier: "SaturdayToScroll",sender: nil)//授業が設定されているときは閲覧
+			}else{
+				self.performSegue(withIdentifier: "SaturdayToSetting",sender: nil)//授業が設定されていないときは設定
+			}
         }
     }
     //ボタンの設定を準備する

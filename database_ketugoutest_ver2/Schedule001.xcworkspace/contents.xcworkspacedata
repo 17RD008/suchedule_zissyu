@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:classMemo.storyboard">
+   </FileRef>
+   <FileRef
       location = "group:Schedule001/scheduleAdd.swift">
    </FileRef>
    <FileRef

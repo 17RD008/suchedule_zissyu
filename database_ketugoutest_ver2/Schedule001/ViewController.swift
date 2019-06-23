@@ -279,5 +279,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
             return button1
         }
     }
- }
+	
+	@IBAction func reveal(_ sender: Any) {
+		let realm = try! Realm()
+		let objs1 = realm.objects(risyuu.self)
+		let objs2 = realm.objects(memo.self)
+		print(objs1)
+		print(objs2)
+	}
+}
 
