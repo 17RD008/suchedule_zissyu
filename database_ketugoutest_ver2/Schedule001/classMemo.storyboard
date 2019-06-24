@@ -21,7 +21,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBT-S3-KeC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="hDU-AP-BuP">
+                                    <navigationItem title="メモ" id="hDU-AP-BuP">
                                         <barButtonItem key="leftBarButtonItem" title="back" id="l2V-M5-A6Z">
                                             <connections>
                                                 <action selector="buckbutton:" destination="Rii-k8-dJN" id="nev-hE-nLd"/>
