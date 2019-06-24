@@ -21,12 +21,15 @@ class classMemo: UIViewController,UITableViewDataSource,UITableViewDelegate {
 	var semester:String = ""//semeste受け取り
 	var num_of_class = 0
 	var jugyou_name = ""
-	var time:Double?
+	var make_time:Double?
+	var timeString = ""
+	var nextOverwriteFlag = false
 	
 	@IBAction func buckbutton(_ sender: Any) {
 		self.dismiss(animated: true, completion: nil)
 	}
 	@IBAction func addbutton(_ sender: Any) {
+		nextOverwriteFlag = false//追加ボタンを押したときは上書きフラグを立てないs
 		self.performSegue(withIdentifier: "memoTomemoField",sender: nil)
 	}
 	
@@ -55,10 +58,9 @@ class classMemo: UIViewController,UITableViewDataSource,UITableViewDelegate {
 			next.semester = self.semester
 			next.num_of_class = self.num_of_class
 			next.jugyou_name = self.jugyou_name
+			next.temp_make_time = self.make_time
+			next.overwriteFlag = self.nextOverwriteFlag
 			
-			if(time != nil)  {
-				next.temptime = self.time
-			}
 		}
 	}
 	
@@ -86,7 +88,9 @@ class classMemo: UIViewController,UITableViewDataSource,UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
-		self.time = memolist[indexPath.row].time
+		self.make_time = memolist[indexPath.row].make_time//セルをタップしたときそのセルを作成したい時間を取得する
+		self.timeString = memolist[indexPath.row].timeString
+		nextOverwriteFlag = true //セルをタップしたときは上書きフラグを立てる
 		self.performSegue(withIdentifier: "memoTomemoField",sender: nil)
 	}	
 }

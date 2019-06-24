@@ -49,7 +49,7 @@ class scheduleAdd: FormViewController{
 			self.semester = controller.semester
 		}
 		
-		if(class_title == nil || credit == nil) {
+		if(class_title == nil || credit == nil || course_name == nil) {
 			return;
 		}
 		
@@ -126,6 +126,7 @@ class scheduleAdd: FormViewController{
 				if realmFlag == true {
 					print(defaultjugyou_name)
 					ret.value = defaultjugyou_name
+					class_title = defaultjugyou_name
 				}
 				}.onChange{ ret in
 					self.class_title = ret.value
@@ -145,7 +146,12 @@ class scheduleAdd: FormViewController{
 			+++ Section("授業分類")
 			<<< PickerInlineRow<String>() { row in
 				row.title = "授業分類"
-				row.options = ["人間形成","英語","学部共通","学系共通","コンピュータソフトウェアコース","ネットワークシステムコース","アミューズメントデザインコース","社会コミュニケーションコース","コンピュータサイエンスコース"]
+				row.options = ["人間形成","英語","学部共通","RD学系共通","コンピュータソフトウェアコース","ネットワークシステムコース","アミューズメントデザインコース","社会コミュニケーションコース","コンピュータサイエンスコース","RT","RU","RB","RG","RE","RM"]
+				if realmFlag == true {
+					course_name = defaultcourse
+					print("ここはcourse")
+					print(defaultcourse)
+				}
 				}.onChange { row in
 					self.course_name = row.value
 			}

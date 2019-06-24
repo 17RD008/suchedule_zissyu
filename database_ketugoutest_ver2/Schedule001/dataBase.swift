@@ -44,7 +44,9 @@ class memo : Object {
 	@objc dynamic var jugyou_name = ""
 	@objc dynamic var number_times = 0
 	@objc dynamic var memo = ""
-	@objc dynamic var time = 0.0
+	@objc dynamic var make_time = 0.0
+	@objc dynamic var last_chenge_time = 0.0
+	@objc dynamic var timeString = ""
 }
 
 class constant {

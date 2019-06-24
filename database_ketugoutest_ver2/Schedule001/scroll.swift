@@ -164,6 +164,7 @@ class scroll:UIViewController {
 				nextc.defaultjugyou_name = obj.jugyou_name
 				nextc.defaultmemo = obj.jugyou_memo
 				nextc.defaultcredit = obj.credit
+				nextc.defaultcourse = obj.course_name
 			}			
 		}
 		
